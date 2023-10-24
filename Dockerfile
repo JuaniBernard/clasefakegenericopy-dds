@@ -9,7 +9,7 @@ COPY requirements.txt /clasefakegenericopy-dds/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el contenido de la aplicación al contenedor
-COPY . /app/
+COPY . /clasefakegenericopy-dds/
 
 # Expone el puerto en el que se ejecutará tu aplicación FastAPI
 EXPOSE 8000
