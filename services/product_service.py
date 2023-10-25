@@ -1,6 +1,5 @@
 from typing import List
 from models.product import Product
-from repositories.product_repository import ProductRepository
 from services.base_service import BaseService
 
 
