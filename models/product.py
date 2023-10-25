@@ -8,3 +8,7 @@ class Product(Base):
     category: str
     image: str
     rating: Rating
+
+    # Anotaciones SQL
+    def __table_args__(cls):
+        return (Index('idx_product_price', cls.price),)
