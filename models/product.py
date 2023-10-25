@@ -1,14 +1,13 @@
-from models.base import Base
+from pydantic import BaseModel
+from decimal import Decimal
+
 from models.rating import Rating
 
-class Product(Base):
+
+class Product(BaseModel):
     title: str
-    price: float
+    price: Decimal
     description: str
     category: str
     image: str
     rating: Rating
-
-    # Anotaciones SQL
-    def __table_args__(cls):
-        return (Index('idx_product_price', cls.price),)

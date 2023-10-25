@@ -1,5 +1,7 @@
-from models.base import Base
+from pydantic import BaseModel
+from decimal import Decimal
 
-class Rating(Base):
-    rate: float
+
+class Rating(BaseModel):
+    rate: Decimal
     count: int
