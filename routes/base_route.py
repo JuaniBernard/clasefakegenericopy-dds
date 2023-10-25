@@ -11,22 +11,22 @@ class BaseRoute:
     def __init__(self, service: BaseService):
         self.service = service
 
-    @router.get("/", response_model=List[BaseModel])
+    @router.get("/")
     def get_all(self):
         return self.service.find_all()
 
-    @router.get("/{id}", response_model=BaseModel)
+    @router.get("/{id}")
     def get_one(self, id: int):
         entity = self.service.find_by_id(id)
         if entity:
             return entity
         raise HTTPException(status_code=404, detail="Entity not found")
 
-    @router.post("/", response_model=BaseModel)
+    @router.post("/")
     def save(self, entity: BaseModel):
         return self.service.save(entity)
 
-    @router.put("/{id}", response_model=BaseModel)
+    @router.put("/{id}")
     def update(self, id: int, entity: BaseModel):
         updated_entity = self.service.update(id, entity)
         if updated_entity:

@@ -1,6 +1,7 @@
 from typing import List
 from pydantic import BaseModel
 
+
 class BaseService:
     def __init__(self, data: List[BaseModel]):
         self.data = data
@@ -8,13 +9,13 @@ class BaseService:
     def find_all(self) -> List[BaseModel]:
         return self.data
 
-    def find_by_id(self, id: int) -> BaseModel:
+    def find_by_id(self, id: int):
         for entity in self.data:
             if entity.id == id:
                 return entity
         return None
 
-    def save(self, entity: BaseModel) -> BaseModel:
+    def save(self, entity: BaseModel):
         entity.id = len(self.data) + 1
         self.data.append(entity)
         return entity
@@ -26,7 +27,7 @@ class BaseService:
                 return entity
         return None
 
-    def delete(self, id: int) -> bool:
+    def delete(self, id: int):
         for i, entity in enumerate(self.data):
             if entity.id == id:
                 del self.data[i]
