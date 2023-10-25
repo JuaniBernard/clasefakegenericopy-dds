@@ -11,6 +11,11 @@ app = _fastapi.FastAPI()
 _services.create_database()
 
 
+@app.on_event("startup")
+async def startup_event():
+    app.state.base_path = "/fakestoreapi.com"
+
+
 @app.post("/products", response_model=_schemas.Product)
 def create_product(
     product: _schemas.ProductCreate, db: _orm.Session = _fastapi.Depends(_services.get_db)
@@ -51,6 +56,22 @@ def update_product(
     db: _orm.Session = _fastapi.Depends(_services.get_db),
 ):
     return _services.update_product(db=db, product=product, product_id=product_id)
+
+
+@app.get("/products/price_higher_than/{minimum_price}", response_model=List[_schemas.Product])
+def search_price_higher_than(
+    minimum_price: float, db: _orm.Session = _fastapi.Depends(_services.get_db)
+):
+    products = _services.search_price_higher_than(db=db, minimum_price=minimum_price)
+    return products
+
+
+@app.get("/products/price_between/{minimum_price}/{maximum_price}", response_model=List[_schemas.Product])
+def search_price_between(
+    minimum_price: float, maximum_price: float, db: _orm.Session = _fastapi.Depends(_services.get_db)
+):
+    products = _services.search_price_between(db=db, minimum_price=minimum_price, maximum_price=maximum_price)
+    return products
 
 
 if __name__ == "__main__":

@@ -51,3 +51,13 @@ def update_product(db: _orm.Session, product_id: int, product: ProductCreate):
 def delete_product(db: _orm.Session, product_id: int):
     db.query(Product).filter(Product.id == product_id).delete()
     db.commit()
+
+
+def search_price_higher_than(db: _orm.Session, minimum_price: float):
+    products = db.query(Product).filter(Product.price > minimum_price).all()
+    return products
+
+
+def search_price_between(db: _orm.Session, minimum_price: float, maximum_price: float):
+    products = db.query(Product).filter(Product.price > minimum_price, Product.price < maximum_price).all()
+    return products
