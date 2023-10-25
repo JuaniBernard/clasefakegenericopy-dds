@@ -21,7 +21,7 @@ def get_one(id: int):
     raise HTTPException(status_code=404, detail="Entity not found")
 
 
-@router.post("/", response_model=Product)
+@router.post("", response_model=Product)
 def save(entity: Product):
     return service.save(entity)
 
