@@ -1,7 +1,7 @@
 from typing import List
 from fastapi import HTTPException
 from pydantic import BaseModel
-from base_repository import BaseRepository
+from repositories.base_repository import BaseRepository
 from models.product import Product
 
 
