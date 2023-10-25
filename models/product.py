@@ -1,12 +1,10 @@
 from pydantic import BaseModel
-from decimal import Decimal
-
 from models.rating import Rating
 
 
 class Product(BaseModel):
     title: str
-    price: Decimal
+    price: float
     description: str
     category: str
     image: str

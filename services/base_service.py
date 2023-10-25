@@ -6,17 +6,18 @@ class BaseService:
     def __init__(self, repository):
         self.repository = repository
 
-    def find_all(self) -> List[Base]:
-        return self.repository.find_all()
+    class BaseService:
+        def find_all(self) -> List[Base]:
+            pass
 
-    def find_by_id(self, id: int) -> Base:
-        return self.repository.find_by_id(id)
+        def find_by_id(self, id: int) -> Base:
+            pass
 
-    def save(self, entity: Base) -> Base:
-        return self.repository.save(entity)
+        def save(self, entity: Base) -> Base:
+            pass
 
-    def update(self, id: int, entity: Base) -> Base:
-        return self.repository.update(id, entity)
+        def update(self, id: int, entity: Base) -> Base:
+            pass
 
-    def delete(self, id: int) -> bool:
-        return self.repository.delete(id)
+        def delete(self, id: int) -> bool:
+            pass
