@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "90b646a8-e560-4ed9-bf90-088cbc311451",
+		"name": "restfakepy(queries)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29567935"
+	},
+	"item": [
+		{
+			"name": "Post Micropave",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"title\": \"Solid Gold Petite Micropave \",\n    \"price\": 168,\n    \"description\": \"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.\",\n    \"category\": \"jewelery\",\n    \"image\": \"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg\",\n    \"rating\": {\n      \"rate\": 3.9,\n      \"count\": 70\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Short Sleeve",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"title\": \"MBJ Women's Solid Short Sleeve Boat Neck V \",\n    \"price\": 9.85,\n    \"description\": \"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem\",\n    \"category\": \"women's clothing\",\n    \"image\": \"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg\",\n    \"rating\": {\n      \"rate\": 4.7,\n      \"count\": 130\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/1",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"title\": \"MBJ Women's Solid Short Sleeve Boat Neck V \",\n    \"price\": 9.85,\n    \"description\": \"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem\",\n    \"category\": \"women's clothing\",\n    \"image\": \"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg\",\n    \"rating\": {\n      \"rate\": 4.3,\n      \"count\": 130\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/12",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Price Higher Than",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/higher?minimumPrice=15",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"higher"
+					],
+					"query": [
+						{
+							"key": "minimumPrice",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Price Between",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/between?minimumPrice=5&maximumPrice=170",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"between"
+					],
+					"query": [
+						{
+							"key": "minimumPrice",
+							"value": "5"
+						},
+						{
+							"key": "maximumPrice",
+							"value": "170"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/2",
+					"protocol": "https",
+					"host": [
+						"el-website-py",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
