@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products",
+					"raw": "https://el-website-py.onrender.com/products",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -29,7 +29,6 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products"
 					]
 				}
@@ -51,7 +50,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products",
+					"raw": "https://el-website-py.onrender.com/products",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -59,7 +58,6 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products"
 					]
 				}
@@ -72,7 +70,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products",
+					"raw": "https://el-website-py.onrender.com/products",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -80,7 +78,6 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products"
 					]
 				}
@@ -93,7 +90,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/1",
+					"raw": "https://el-website-py.onrender.com/products/1",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -101,7 +98,6 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products",
 						"1"
 					]
@@ -124,7 +120,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/12",
+					"raw": "https://el-website-py.onrender.com/products/3",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -132,9 +128,8 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products",
-						"12"
+						"3"
 					]
 				}
 			},
@@ -158,7 +153,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/higher?minimumPrice=15",
+					"raw": "https://el-website-py.onrender.com/products/price_higher_than/10",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -166,15 +161,9 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products",
-						"higher"
-					],
-					"query": [
-						{
-							"key": "minimumPrice",
-							"value": "15"
-						}
+						"price_higher_than",
+						"10"
 					]
 				}
 			},
@@ -186,7 +175,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/between?minimumPrice=5&maximumPrice=170",
+					"raw": "https://el-website-py.onrender.com/products/price_between/5/15",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -194,19 +183,10 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products",
-						"between"
-					],
-					"query": [
-						{
-							"key": "minimumPrice",
-							"value": "5"
-						},
-						{
-							"key": "maximumPrice",
-							"value": "170"
-						}
+						"price_between",
+						"5",
+						"15"
 					]
 				}
 			},
@@ -218,7 +198,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://el-website-py.onrender.com/fakestoreapi.com/products/2",
+					"raw": "https://el-website-py.onrender.com/products/2",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -226,7 +206,6 @@
 						"com"
 					],
 					"path": [
-						"fakestoreapi.com",
 						"products",
 						"2"
 					]

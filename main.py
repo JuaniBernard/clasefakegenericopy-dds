@@ -11,11 +11,6 @@ app = _fastapi.FastAPI()
 _services.create_database()
 
 
-@app.on_event("startup")
-async def startup_event():
-    app.state.base_path = "/fakestoreapi.com"
-
-
 @app.post("/products", response_model=_schemas.Product)
 def create_product(
     product: _schemas.ProductCreate, db: _orm.Session = _fastapi.Depends(_services.get_db)

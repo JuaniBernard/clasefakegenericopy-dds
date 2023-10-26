@@ -23,7 +23,7 @@ class _ProductBase(BaseModel):
     description: str = None
     category: str = None
     image: str = None
-    rating: Rating
+    rating: RatingCreate
 
 
 class ProductCreate(_ProductBase):
