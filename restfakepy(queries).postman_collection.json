@@ -120,7 +120,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://el-website-py.onrender.com/products/3",
+					"raw": "https://el-website-py.onrender.com/products/2",
 					"protocol": "https",
 					"host": [
 						"el-website-py",
@@ -129,7 +129,7 @@
 					],
 					"path": [
 						"products",
-						"3"
+						"2"
 					]
 				}
 			},
